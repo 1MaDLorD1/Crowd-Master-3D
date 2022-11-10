@@ -18,15 +18,15 @@ public class Enemy : StateMachine, IDamageable
 
     private void OnEnable()
     {
-        _healthContainer.Died += OnEnemyDie;
+        _healthContainer.Died += OnEnemyDied;
     }
 
     private void OnDisable()
     {
-        _healthContainer.Died -= OnEnemyDie;
+        _healthContainer.Died -= OnEnemyDied;
     }
 
-    private void OnEnemyDie()
+    private void OnEnemyDied()
     {
         enabled = false;
         _rigidbody.constraints = RigidbodyConstraints.None;

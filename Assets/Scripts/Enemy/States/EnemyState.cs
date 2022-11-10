@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyState : State
 {
-    //[SerializeField] private EnemyTransition[] _enemyTransitions;
-
     public Player Player { get; private set; }
 
     public void Enter(Rigidbody rigidbody, Animator animator, Player player)
